@@ -1,15 +1,17 @@
 # Porting vlibc
 
+## How to port
+
 To get the changes on tree please make a pull request, I can mantain and update
 them from there if needed.
 
 The modifications to do to port vlibc are located in 4 folders, and are the
 following:
 
-- `source/crt`: crt0, declared in `if`s for each port.
+- `source/crt`: crt0, declared in a file for each port.
 - `headers-sysdeps`: The headers representing the sysdeps along with OS-specific
 functions.
-- `sysdeps`: The actual V code for the sysdeps.
+- `vlibc/sysdeps`: The actual V code for the sysdeps.
 
 ## Headers necessary under headers-sysdeps
 

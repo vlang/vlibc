@@ -3,6 +3,9 @@
 A POSIX-compatible libc meant for ease of porting and performance for hobbyist
 OSes, obtaining this by using the V programming language.
 
+For now, static linking is the only mode the libc supports, to be changed
+with future work.
+
 ## Porting
 
 To learn about porting vlibc to a new OS or architecture please refer to
@@ -21,7 +24,6 @@ project.
 An example process would be:
 
 ```bash
-make CFLAGS="-O2 -pipe"     # Optimization flags are not passed by default.
-make test                   # Run the automated tests.
+make VFLAGS="-prod" CFLAGS='-O -pipe' # Optimization flags are not passed by default.
 make PREFIX="/usr/" install # Install, feel free to use PREFIX or DESTDIR.
 ```
