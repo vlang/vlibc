@@ -1,5 +1,6 @@
 module main
 
+import libc // Else V does not compile it.
 import sysdeps
 
 // Here because v wants one.
