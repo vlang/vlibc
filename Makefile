@@ -18,7 +18,7 @@ ASFLAGS =
 ARFLAGS =
 
 VHARDFLAGS := $(VFLAGS) -os $(TARGET_OS) -d $(TARGET_ARCH)
-CHARDFLAGS := $(CFLAGS) -ffreestanding -fno-stack-protector -fdata-sections -ffunction-sections
+CHARDFLAGS := $(CFLAGS) -I$(SRCDIR)/headers -ffreestanding -fno-stack-protector -fdata-sections -ffunction-sections
 ASHARDFLAGS := $(ASFLAGS) -ffreestanding
 ARHARDFLAGS := $(ARFLAGS) rcs
 
