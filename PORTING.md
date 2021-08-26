@@ -16,8 +16,10 @@ language features for separate architectures.
 
 ## Headers necessary under headers-sysdeps
 
-All OS specific headers your OS needs, nothing else so far.
+- `host_mmap.h`: `PROT` and `MAP` flags of the implementation.
 
 ## Functions necessary under sysdeps
 
 - `sys_exit`: POSIX-compatible `_exit` equivalent.
+- `sys_mmap`: POSIX-compatible `mmap` equivalent.
+- `sys_munmap`: POSIX-compatible `munmap` equivalent.

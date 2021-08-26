@@ -5,7 +5,7 @@ PREFIX    = /usr/local
 DESTDIR   =
 SRCDIR   := source
 HDIR     := source/headers
-SYSHDIR  := source/headers-sysdeps
+SYSHDIR  := source/headers-sysdeps/$(TARGET_OS)
 
 # Compilers and its flags.
 VC      = v
@@ -17,7 +17,7 @@ CFLAGS  =
 ASFLAGS =
 ARFLAGS =
 
-VHARDFLAGS := $(VFLAGS) -os $(TARGET_OS) -d $(TARGET_ARCH)
+VHARDFLAGS := $(VFLAGS) -enable-globals -os $(TARGET_OS) -d $(TARGET_ARCH)
 CHARDFLAGS := $(CFLAGS) -I$(SRCDIR)/headers -ffreestanding -fno-stack-protector -fdata-sections -ffunction-sections
 ASHARDFLAGS := $(ASFLAGS) -ffreestanding
 ARHARDFLAGS := $(ARFLAGS) rcs
